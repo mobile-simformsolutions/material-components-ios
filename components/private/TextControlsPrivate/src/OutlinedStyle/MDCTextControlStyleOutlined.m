@@ -69,13 +69,13 @@ static const CGFloat kFilledFloatingLabelScaleFactor = (CGFloat)0.75;
 - (void)setUpOutlineLineWidths {
   self.outlineLineWidths = [NSMutableDictionary new];
   self.outlineLineWidths[@(MDCTextControlStateNormal)] = @(1);
-  self.outlineLineWidths[@(MDCTextControlStateEditing)] = @(2);
+  self.outlineLineWidths[@(MDCTextControlStateEditing)] = @(1);
   self.outlineLineWidths[@(MDCTextControlStateDisabled)] = @(1);
 }
 
 - (void)setUpOutlineSublayer {
   self.outlinedSublayer = [[CAShapeLayer alloc] init];
-  self.outlinedSublayer.fillColor = [UIColor clearColor].CGColor;
+  self.outlinedSublayer.fillColor = [UIColor whiteColor].CGColor;
   self.outlinedSublayer.lineWidth =
       (CGFloat)[self.outlineLineWidths[@(MDCTextControlStateNormal)] doubleValue];
 }
